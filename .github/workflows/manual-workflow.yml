@@ -13,6 +13,7 @@ jobs:
       - name: printing os
         run: cat /etc/os-release
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: jaga
