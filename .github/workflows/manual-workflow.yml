@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: jaga
-        run: echo"creating deploy stage by jaga...."
+        run: echo "creating deploy stage by jaga...."
       - name: printing work dir
         run: pwd
       
