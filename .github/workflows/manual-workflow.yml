@@ -1,0 +1,24 @@
+name: manual-workflow
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: paramesh
+        run: echo "creating manual run workflow by paramesh..."
+      - name: Pre-built functionalities
+        uses: actions/checkout@v5.0.0
+      - name: pritning pre functionalities
+        run: ls
+      - name: printing os
+        run: cat /etc/os-release
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: jaga
+        run: echo"creating deploy stage by jaga...."
+      - name: printing work dir
+        run: pwd
+      
+      
+        
