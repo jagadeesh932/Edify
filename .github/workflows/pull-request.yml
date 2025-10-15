@@ -1,0 +1,9 @@
+name: Pull-Request workflow
+on: pull_request
+jobs:
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: jaga
+        run: echo "run workflow on pull request"
+  
