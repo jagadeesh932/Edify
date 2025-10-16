@@ -6,12 +6,19 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ID: 12345
     steps:
       - name: Calling environment variables
+        env:
+          LOCALITY: JAMMALAMADUGU
         run: echo "Hello my name is:" $NAME "and am from" $DOMAIN
       - name: calling step variable
         env:
           USERMAIL: jaga@gmail.com
-        run: echo "my mail id is :" $USERMAIL
+        run: |
+          echo "my mail id is :" $USERMAIL
+          echo " Hello my name is: "$NAME "AND AM FROM:"$LOCALITY
+          echo "my id num is: "$ID
          
   
