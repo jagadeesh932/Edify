@@ -2,6 +2,7 @@ name: Environment variable
 on: workflow_dispatch
 env:
   NAME: JAGADEESH
+  name: paramesh
   DOMAIN: AWS WITH DEVOPS
 jobs:
   build:
@@ -20,5 +21,13 @@ jobs:
           echo "my mail id is :" $USERMAIL
           echo " Hello my name is: "$NAME "AND AM FROM:"$LOCALITY
           echo "my id num is: "$ID
-         
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      USEREMAIL: paramesh@gmail.com
+    steps:
+      - name: calling job level variable- calling from job-1(build)
+        run: 
+          echo "my name is:" $NAME "and my mail is:" $USEREMAIL
+          echo "my name is " $name "and my id is:" $ID
   
