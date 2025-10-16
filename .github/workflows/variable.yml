@@ -1,0 +1,17 @@
+name: Environment variable
+on: workflow_dispatch
+env:
+  NAME: JAGADEESH
+  DOMAIN: AWS WITH DEVOPS
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Calling environment variables
+        run: echo "Hello my name is:" $NAME "and am from" $DOMAIN
+      - name: calling step variable
+        env:
+          USERMAIL: jaga@gmail.com
+        run: echo "my mail id is :" $USERMAIL
+         
+  
