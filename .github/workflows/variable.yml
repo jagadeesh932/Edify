@@ -27,7 +27,7 @@ jobs:
       USEREMAIL: paramesh@gmail.com
     steps:
       - name: calling job level variable- calling from job-1(build)
-        run: 
+        run: |
           echo "my name is:" $NAME "and my mail is:" $USEREMAIL
           echo "my name is " $NA "and my id is:" $ID
   
