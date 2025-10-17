@@ -13,3 +13,15 @@ jobs:
     steps:
       - name: listing files
         run: ls
+
+###############################################
+  build1:
+    runs-on: self-hosted
+    steps:
+      - name: listing files
+        run: ls
+  test1:
+    runs-on: Linux
+    steps:
+      - name: listing files
+        run: ls
