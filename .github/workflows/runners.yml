@@ -5,7 +5,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: examples on runner
-        run: echo "testing runners..." > test.txt
+        run: echo "checking runners hosting ..." > file1.txt
       - name: listing files
         run: ls
   test1:
@@ -13,11 +13,11 @@ jobs:
     needs: build1
     steps:
       - name: checking content
-        run: cat test.txt
+        run: cat file1.txt
   deploy:
     runs-on: Jaga Paramesh
     steps:
-      - name: predefined function
-        uses: actions/checkout@v5.0.0
-      - name: listing predefined funtion
-        run: ls
+      - name: checking files
+        run: |
+          ls
+          cat file1.txt
