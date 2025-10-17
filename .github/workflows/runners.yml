@@ -1,20 +1,6 @@
 name: runners
 on: workflow_dispatch
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: examples on runner
-        run: echo "testing runners" > test.txt
-      - name: listing files
-        run: ls
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: listing files
-        run: ls
-
-###############################################
   build1:
     runs-on: self-hosted
     steps:
@@ -28,3 +14,10 @@ jobs:
     steps:
       - name: checking content
         run: cat test.txt
+  deploy:
+    runs-on: Jaga Paramesh
+    steps:
+      - name: predefined function
+        uses: actions/checkout@v5.0.0
+      - name: listing predefined funtion
+        run: ls
