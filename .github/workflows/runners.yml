@@ -18,10 +18,12 @@ jobs:
   build1:
     runs-on: self-hosted
     steps:
+      - name: examples on runner
+        run: echo "testing runners..." > test.txt
       - name: listing files
         run: ls
   test1:
     runs-on: Linux
     steps:
-      - name: listing files
-        run: ls
+      - name: checking content
+        run: cat test.txt
